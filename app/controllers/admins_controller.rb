@@ -6,6 +6,9 @@ class AdminsController < ApplicationController
     #	@user = nil
     #  	redirect_to :action=>"deanery", :controller=>"pages"
     #end
+    @page = Page.new
+    @body = Page.find_by_id(1).body
+
   end
 
   def static_pages_editor
