@@ -1,0 +1,9 @@
+
+	<p><%= link_to "Додати оголошення", deanery_editor_path(:form_of_study => @form_of_study) %></p>
+	<% for a in @ad %>
+		<hr />
+		<br>Заголовок<br><br>
+		<%= a.title.html_safe %><br><br>
+		Текст<br>
+		<%= a.body.html_safe%>
+	<% end %>

@@ -1,11 +1,11 @@
 Fit::Application.routes.draw do
-
-  match '/admins/deanery_editor', :to =>'admins#deanery_editor'
-
-  get "admins/static_pages_editor"
-
   root :to => 'pages#index'
   
+  match '/deanery_editor', :to =>'admins#deanery_editor'
+  match '/static_pages_editor', :to =>'admins#static_pages_editor'
+  match '/deanery_full_time', :to =>'pages#deanery_full_time'
+  match '/deanery_correspondence', :to =>'pages#deanery_correspondence'
+
   match '/chairs',  :to => 'pages#chairs'
   match '/deanery',  :to => 'pages#deanery'
   match '/applicant',  :to => 'pages#applicant'
