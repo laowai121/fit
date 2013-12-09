@@ -8,6 +8,18 @@ class PagesController < ApplicationController
   def deanery
   end
 
+  def student
+  end
+
+  def science     #student
+  end
+
+  def student_council     #student
+  end
+
+  def conferences     #student
+  end
+
   def applicant
   end
 

@@ -2,12 +2,15 @@ Fit::Application.routes.draw do
 
   match '/admins/deanery_editor', :to =>'admins#deanery_editor'
 
-  get "admins/static_pages_editor"
-
+  match '/student/science', :to => 'pages#science'
+  match '/student/student_council', :to => 'pages#student_council'
+  match '/student/conferences', :to => 'pages#conferences'
+  
   root :to => 'pages#index'
   
   match '/chairs',  :to => 'pages#chairs'
   match '/deanery',  :to => 'pages#deanery'
+  match '/student',  :to => 'pages#student'
   match '/applicant',  :to => 'pages#applicant'
   match '/contact',  :to => 'pages#contact'
   match '/login',  :to => 'users#login'
